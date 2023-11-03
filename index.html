@@ -1,0 +1,3066 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Title your site</title>
+    <meta
+      content="width=device-width, initial-scale=1"
+      name="viewport" />
+    <meta
+      content="ie=edge"
+      http-equiv="x-ua-compatible" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500;1,700&amp;display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="libs/nice-select.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link
+      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="libs/reset.min.css" />
+    <link
+      rel="stylesheet"
+      href="css/styles.css?v=21" />
+  </head>
+  <body>
+    <div
+      class="player-widget"
+      id="player-widget">
+      <canvas
+        class="progress-circ"
+        id="progress-circ"
+        width="60"
+        height="60"></canvas>
+      <div class="player-widget-inner">
+        <button
+          class="widget-play-btn"
+          id="widget-play-btn" aria-label="play button">
+          <div class="button-inner">
+            <svg
+              width="16"
+              height="18"
+              viewBox="0 0 16 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14.9011 7.38185C16.2604 8.14646 16.2604 10.1035 14.9011 10.8682L2.98052 17.5735C1.64731 18.3234 -8.02539e-07 17.36 -7.35676e-07 15.8303L-1.4948e-07 2.4197C-8.26164e-08 0.890042 1.64731 -0.0733861 2.98052 0.676544L14.9011 7.38185Z"
+                fill="white"></path>
+            </svg>
+          </div>
+        </button>
+        <button
+          class="widget-pause-btn"
+          id="widget-pause-btn">
+          <div class="button-inner">
+            <svg
+              width="12"
+              height="16"
+              viewBox="0 0 12 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect
+                width="4"
+                height="16"
+                rx="2"
+                fill="white"></rect>
+              <rect
+                x="8"
+                width="4"
+                height="16"
+                rx="2"
+                fill="white"></rect>
+            </svg>
+          </div>
+        </button>
+      </div>
+    </div>
+    <div class="overlay"></div>
+    <div class="modal-box callback-modal">
+      <form
+        class="modal-form"
+        action="#">
+        <button class="close-modal">
+          <svg
+            width="24"
+            height="23"
+            viewBox="0 0 24 23"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <line
+              x1="1.35355"
+              y1="0.646447"
+              x2="23.3536"
+              y2="22.6464"
+              stroke="#A5AAAE"
+              stroke-width="1.2"></line>
+            <line
+              x1="0.646447"
+              y1="22.6464"
+              x2="22.6464"
+              y2="0.646448"
+              stroke="#A5AAAE"
+              stroke-width="1.2"></line>
+          </svg>
+        </button>
+        <div class="modal-form-content">
+          <strong
+            >We'll be in touch <br class="br-modal-mob" />  
+            at our convenience</strong
+          >
+          <div class="input-wrap">
+            <input
+              type="tel"
+              id="tel" />
+            <label for="tel">Phone</label>
+          </div>
+          <div class="input-wrap">
+            <input
+              type="text"
+              id="name" />
+            <label for="name">How do I address you </label>
+          </div>
+          <div class="callback-time callback-time-desc">
+            <strong>Call back </strong
+            ><select>
+              <option data-display="tomorrow from 10:00 to 13:00">
+                tomorrow from 10:00 to 13:00
+              </option>
+              <option value="1">right now</option>
+              <option value="2">tomorrow from 10:00 to 13:00</option>
+              <option value="3">tomorrow from 1:00 to 4:00 p.m.</option>
+              <option value="4">tomorrow from 4:00 to 7:00 p.m.</option>
+            </select>
+          </div>
+          <div class="callback-time callback-time-mob">
+            <strong>Call back </strong>
+            <div class="s-box">
+              <select>
+                <option value="1">right now</option>
+                <option
+                  value="2"
+                  selected>
+                  tomorrow from 10:00 to 13:00
+                </option>
+                <option value="3">tomorrow from 1:00 to 4:00 p.m.</option>
+                <option value="4">tomorrow from 4:00 to 7:00 p.m.</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="modal-form-footer">
+          <button class="submit-btn">Call me back</button>
+          <p class="form-note">
+            By clicking "call me back," I agree to the
+            <a href="#">processing of personal data.</a>
+          </p>
+        </div>
+      </form>
+    </div>
+    <div class="modal-box shanks-modal">
+      <button class="close-modal">
+        <svg
+          width="24"
+          height="23"
+          viewBox="0 0 24 23"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <line
+            x1="1.35355"
+            y1="0.646447"
+            x2="23.3536"
+            y2="22.6464"
+            stroke="#A5AAAE"></line>
+          <line
+            x1="0.646447"
+            y1="22.6464"
+            x2="22.6464"
+            y2="0.646448"
+            stroke="#A5AAAE"></line>
+        </svg>
+      </button>
+      <div class="modal-form-content">
+        <strong>That's great!</strong>
+        <p>
+          We will call you back <span class="select-time">tomorrow from 10:00 to 13:00</span> and
+          answer all your questions
+        </p>
+      </div>
+      <div class="modal-form-footer">
+        <button class="agree-btn">All right.</button>
+      </div>
+    </div>
+    <header class="main-header wrapper">
+      <a
+        class="rose-btn rose-btn--type-1"
+        href="#">
+        <svg
+          width="37"
+          height="16"
+          viewBox="0 0 37 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M35.5 8C35.5 8 34.035 6.55702 22.5 7C9.5 7.49924 10.5 7.99924 2.5 8"
+            stroke="#C3146F"
+            stroke-width="1.5"
+            stroke-miterlimit="10"
+            stroke-linecap="round"></path>
+          <path
+            d="M11.3383 1.20185C8.81628 4.79185 4.51028 5.18785 1.47128 8.08185C4.43828 9.28985 10.3423 12.0099 12.2383 14.7979"
+            stroke="#C3146F"
+            stroke-width="1.5"
+            stroke-miterlimit="10"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path></svg
+        >Real Estate</a
+      >
+      <a
+        class="rose-btn rose-btn--type-2"
+        href="#contacts">
+        Contacts
+        <svg
+          width="33"
+          height="34"
+          viewBox="0 0 33 34"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M0.999704 1.50026C25.4998 0.500474 23.9997 21.0005 23.9997 21.0005"
+            stroke="#C3146F"
+            stroke-width="1.5"
+            stroke-miterlimit="10"
+            stroke-linecap="round"></path>
+          <path
+            d="M19 14.6687C21.6405 16.5426 21.9317 19.742 24.0603 22C24.9488 19.7955 26.9494 15.4087 29 14"
+            stroke="#C3146F"
+            stroke-width="1.5"
+            stroke-miterlimit="10"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path></svg
+      ></a>
+    </header>
+    <main class="main">
+      <section class="main-section">
+        <div
+          class="main-section-content wrapper"
+          style="background-image: url('img/clouds.svg')">
+          <div class="shape shape-1">
+            <img
+              src="img/shapes/ms1.svg"
+              alt="#" />
+          </div>
+          <div class="shape shape-2">
+            <img
+              src="img/shapes/ms2.svg"
+              alt="#" />
+          </div>
+          <h1
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-duration="1000">
+            <strong class="accent-text-mask accent-text--purple">Real Estate.</strong
+            ><strong class="accent-text-mask accent-text--blue"
+              >New Buildings</strong
+            >
+          </h1>
+          <p
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-duration="1000">
+            We've been in business for 30 years.
+            <strong class="emphatically"
+              ><b>Know everything <br /></b> about real estate.
+              <svg
+                width="489"
+                height="9"
+                viewBox="0 0 489 9"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M1 3.07952C83.418 0.56647 190.635 4.09377 216.221 5.34128C281 8.49975 398.5 5.34129 488 3.07953"
+                  stroke="#00C7D1"
+                  stroke-width="3"
+                  data-llp-duration="500"
+                  data-llp-delay="0"
+                  fill-opacity="0"></path></svg></strong
+            ><br /><strong class="emphatically emphatically-mob"
+              >Find accommodation 
+              <svg
+                width="267"
+                height="6"
+                viewBox="0 0 267 6"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M1 3.07932C45.8476 0.566265 145.928 3.73595 160 3.07933C226 -0.00024426 227.5 5.99975 266 3.07933"
+                  stroke="#00C7D1"
+                  stroke-width="3"
+                  data-llp-duration="500"
+                  data-llp-delay="0"
+                  fill-opacity="0"></path></svg
+            ></strong>
+            among thousands of offers at the best price.
+          </p>
+          <div
+            class="player player-skin-1"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+            data-manager-photo-url="img/person.webp">
+            <audio
+              class="audio-element"
+              preload="metadata">
+              <source
+                src="audio/audio-1.mp3"
+                type="audio/mpeg" />
+            </audio>
+            <button class="play control" aria-label="play button">
+              <div class="control-inner">
+                <svg
+                  class="play-icon"
+                  width="18"
+                  height="19"
+                  viewBox="0 0 18 19"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M15.7862 7.2555C17.566 8.25663 17.566 10.8191 15.7862 11.8202L4.05392 18.4196C2.30832 19.4015 0.151443 18.1401 0.151443 16.1373L0.151443 2.93844C0.151443 0.935618 2.30832 -0.32582 4.05393 0.656084L15.7862 7.2555Z"
+                    fill="white"></path>
+                </svg>
+              </div>
+            </button>
+            <button class="pause control">
+              <div class="control-inner">
+                <svg
+                  class="pause-icon"
+                  width="12"
+                  height="16"
+                  viewBox="0 0 12 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <rect
+                    width="4"
+                    height="16"
+                    rx="2"
+                    fill="white"></rect>
+                  <rect
+                    x="8"
+                    width="4"
+                    height="16"
+                    rx="2"
+                    fill="white"></rect>
+                </svg>
+              </div>
+            </button>
+            <div class="progress-bar">
+              <svg
+                width="122"
+                height="17"
+                viewBox="0 0 122 17"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect
+                  y="4"
+                  width="2"
+                  height="13"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="6"
+                  y="8"
+                  width="2"
+                  height="9"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="12"
+                  y="6"
+                  width="2"
+                  height="11"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="18"
+                  y="7"
+                  width="2"
+                  height="10"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="24"
+                  y="7"
+                  width="2"
+                  height="19"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="30"
+                  y="6"
+                  width="2"
+                  height="11"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="36"
+                  y="5"
+                  width="2"
+                  height="12"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="42"
+                  y="4"
+                  width="2"
+                  height="13"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="48"
+                  y="6"
+                  width="2"
+                  height="11"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="54"
+                  y="8"
+                  width="2"
+                  height="9"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="60"
+                  y="9"
+                  width="2"
+                  height="8"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="66"
+                  y="6"
+                  width="2"
+                  height="11"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="72"
+                  y="3"
+                  width="2"
+                  height="14"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="78"
+                  y="4"
+                  width="2"
+                  height="13"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="84"
+                  y="5"
+                  width="2"
+                  height="12"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="90"
+                  y="6"
+                  width="2"
+                  height="11"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="96"
+                  y="3"
+                  width="2"
+                  height="14"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="102"
+                  y="5"
+                  width="2"
+                  height="12"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="108"
+                  y="7"
+                  width="2"
+                  height="10"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="114"
+                  y="4"
+                  width="2"
+                  height="13"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="120"
+                  y="10"
+                  width="2"
+                  height="7"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+              </svg>
+            </div>
+            <div class="timeout"><span> </span></div>
+          </div>
+        </div>
+        <div class="main-section-footer wrapper-xs">
+          <img
+            src="img/home.webp"
+            width="587"
+            height="448"
+            alt="#" />
+        </div>
+      </section>
+      <section class="professionals">
+        <div class="map-part-mob-1 map-part-mob">
+          <img
+            src="img/map-part-1.webp"
+            width="352.91"
+            height="418.51"
+            alt="#" />
+        </div>
+        <div class="map-part-mob-2 map-part-mob">
+          <img
+            src="img/map-part-2.webp"
+            width="121.2"
+            height="196.05"
+            alt="#" />
+        </div>
+        <div class="map-part-mob-3 map-part-mob">
+          <img
+            src="img/map-part-3.webp"
+            width="96.24"
+            height="201.98"
+            alt="#" />
+        </div>
+        <div class="map-part-mob-4 map-part-mob">
+          <img
+            src="img/map-part-4.webp"
+            width="154.46"
+            height="283.58"
+            alt="#" />
+        </div>
+        <div class="shape shape-1">
+          <img
+            src="img/shapes/ms5.svg"
+            alt="#" />
+        </div>
+        <div class="professionals-content">
+          <div class="wrapper">
+            <div
+              class="player player-skin-3"
+              data-manager-photo-url="img/person.webp">
+              <audio
+                class="audio-element"
+                preload="metadata">
+                <source
+                  src="audio/audio-3.mp3"
+                  type="audio/mpeg" />
+              </audio>
+              <button class="play control" aria-label="play button">
+                <div class="control-inner">
+                  <svg
+                    class="play-icon"
+                    width="18"
+                    height="19"
+                    viewBox="0 0 18 19"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M15.7862 7.2555C17.566 8.25663 17.566 10.8191 15.7862 11.8202L4.05392 18.4196C2.30832 19.4015 0.151443 18.1401 0.151443 16.1373L0.151443 2.93844C0.151443 0.935618 2.30832 -0.32582 4.05393 0.656084L15.7862 7.2555Z"
+                      fill="white"></path>
+                  </svg>
+                </div>
+              </button>
+              <button class="pause control">
+                <div class="control-inner">
+                  <svg
+                    class="pause-icon"
+                    width="12"
+                    height="16"
+                    viewBox="0 0 12 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect
+                      width="4"
+                      height="16"
+                      rx="2"
+                      fill="white"></rect>
+                    <rect
+                      x="8"
+                      width="4"
+                      height="16"
+                      rx="2"
+                      fill="white"></rect>
+                  </svg>
+                </div>
+              </button>
+              <div class="progress-bar">
+                <svg
+                  width="103"
+                  height="14"
+                  viewBox="0 0 103 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <rect
+                    y="2"
+                    width="2"
+                    height="11"
+                    rx="1"
+                    fill="#00C7D1"></rect>
+                  <rect
+                    x="6"
+                    width="2"
+                    height="13"
+                    rx="1"
+                    fill="#00C7D1"></rect>
+                  <rect
+                    x="12"
+                    y="3"
+                    width="2"
+                    height="10"
+                    rx="1"
+                    fill="#00C7D1"></rect>
+                  <rect
+                    x="18"
+                    y="5"
+                    width="2"
+                    height="8"
+                    rx="1"
+                    fill="#00C7D1"></rect>
+                  <rect
+                    x="24"
+                    y="5"
+                    width="2"
+                    height="8"
+                    rx="1"
+                    fill="#00C7D1"></rect>
+                  <rect
+                    x="30"
+                    width="2"
+                    height="13"
+                    rx="1"
+                    fill="#00C7D1"></rect>
+                  <rect
+                    x="36"
+                    y="5"
+                    width="2"
+                    height="8"
+                    rx="1"
+                    fill="#00C7D1"></rect>
+                  <rect
+                    x="42"
+                    y="2"
+                    width="2"
+                    height="11"
+                    rx="1"
+                    fill="#00C7D1"></rect>
+                  <rect
+                    x="48"
+                    width="2"
+                    height="13"
+                    rx="1"
+                    fill="#00C7D1"></rect>
+                  <rect
+                    x="54"
+                    width="2"
+                    height="13"
+                    rx="1"
+                    fill="#00C7D1"></rect>
+                  <rect
+                    x="60"
+                    y="5"
+                    width="2"
+                    height="8"
+                    rx="1"
+                    fill="#00C7D1"></rect>
+                  <rect
+                    x="66"
+                    width="2"
+                    height="13"
+                    rx="1"
+                    fill="#00C7D1"></rect>
+                  <rect
+                    x="72"
+                    y="5"
+                    width="2"
+                    height="8"
+                    rx="1"
+                    fill="#00C7D1"></rect>
+                  <rect
+                    x="78"
+                    y="3"
+                    width="2"
+                    height="10"
+                    rx="1"
+                    fill="#00C7D1"></rect>
+                  <rect
+                    x="84"
+                    y="2"
+                    width="2"
+                    height="11"
+                    rx="1"
+                    fill="#00C7D1"></rect>
+                  <rect
+                    x="90"
+                    width="2"
+                    height="13"
+                    rx="1"
+                    fill="#00C7D1"></rect>
+                  <rect
+                    x="96"
+                    y="6"
+                    width="2"
+                    height="7"
+                    rx="1"
+                    fill="#00C7D1"></rect>
+                  <rect
+                    x="101"
+                    y="9"
+                    width="2"
+                    height="4"
+                    rx="1"
+                    fill="#00C7D1"></rect>
+                </svg>
+              </div>
+              <div class="timeout"><span> </span></div>
+            </div>
+            <h2>
+              <strong class="accent-text--color-blue"
+                >View of professionals</strong
+              >on all new buildings in and the region
+            </h2>
+            <ul class="random-pos-list">
+              <li>
+                <p class="emphatically-type-2">
+                  We know all the objects and intricacies of valuation
+                  <svg
+                    width="154"
+                    height="18"
+                    viewBox="0 0 154 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1.51655 14.2137C48.7891 21.0802 66.8242 10.2666 81.4298 5.85861C110.011 -2.76719 130.114 3.57865 152.687 8.67055"
+                      stroke="#00C7D1"
+                      stroke-width="3"></path>
+                  </svg>
+                </p>
+              </li>
+              <li>
+                <p class="emphatically-type-2">
+                  We know all the housing projects <br />
+                  and how they're built
+                  <svg
+                    width="139"
+                    height="43"
+                    viewBox="0 0 139 43"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1.6042 13.2191C17.7966 15.9235 52.8415 7.74958 68.4686 4.8435C84.0956 1.93741 93.7898 -0.0600996 101.693 3.96909C107.48 6.9197 102.616 9.2565 98.7346 10.6625C81.8951 16.762 62.9969 19.6073 45.1614 23.3062C33.5842 25.7072 21.2635 27.4597 10.1432 31.0546C4.54733 32.8635 -10.9552 43.5982 28.8304 40.4364C68.6159 37.2747 98.983 29.2569 137.117 20.8857"
+                      stroke="#FFCB05"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong class="emphatically-type-2"
+                    >Every
+                    <svg
+                      width="124"
+                      height="7"
+                      viewBox="0 0 124 7"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1 1.5C1 1.5 78.5 10 123.5 1.5"
+                        stroke="#FF5E01"
+                        stroke-width="3"></path></svg></strong
+                  >district and region
+                </p>
+              </li>
+              <li>
+                <p class="emphatically-type-2">
+                  Each real estate developer and their reliability
+                  <svg
+                    width="108"
+                    height="13"
+                    viewBox="0 0 108 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M106.147 1.98722C105.095 3.11563 103.986 2.47116 102.896 2.80638C97.9332 4.33237 92.9417 6.25196 88.0066 7.4749C70.0157 11.9331 52.5676 11.5091 35.5221 10.4421C26.4331 9.87312 17.6383 7.53393 8.34579 7.97492C6.41726 8.06644 0.469142 9.47903 2.38002 9.48199C4.48675 9.48525 7.14833 8.27258 9.28297 7.75447"
+                      stroke="#991FA9"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </p>
+              </li>
+            </ul>
+            <div class="watchword"><span>That's our job.</span></div>
+          </div>
+        </div>
+        <div class="botoom-plug"></div>
+      </section>
+      <section class="assistance wrapper">
+        <div class="shape shape-1">
+          <img
+            src="img/shapes/ms3.svg"
+            alt="#" />
+        </div>
+        <h2>
+          <strong class="accent-text--color-blue">Keeping you from making mistakes.</strong>
+          Helping
+        </h2>
+        <ul class="podcasts-list">
+          <li>
+            <div class="podcast-box">
+              <div
+                class="player player-skin-2"
+                data-manager-photo-url="img/person.webp">
+                <audio
+                  class="audio-element"
+                  preload="metadata">
+                  <source
+                    src="audio/audio-2.mp3"
+                    type="audio/mpeg" />
+                </audio>
+                <button class="play control" aria-label="play button">
+                  <div class="control-inner">
+                    <svg
+                      class="play-icon"
+                      width="18"
+                      height="19"
+                      viewBox="0 0 18 19"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15.7862 7.2555C17.566 8.25663 17.566 10.8191 15.7862 11.8202L4.05392 18.4196C2.30832 19.4015 0.151443 18.1401 0.151443 16.1373L0.151443 2.93844C0.151443 0.935618 2.30832 -0.32582 4.05393 0.656084L15.7862 7.2555Z"
+                        fill="white"></path>
+                    </svg>
+                  </div>
+                </button>
+                <button class="pause control">
+                  <div class="control-inner">
+                    <svg
+                      class="pause-icon"
+                      width="12"
+                      height="16"
+                      viewBox="0 0 12 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <rect
+                        width="4"
+                        height="16"
+                        rx="2"
+                        fill="white"></rect>
+                      <rect
+                        x="8"
+                        width="4"
+                        height="16"
+                        rx="2"
+                        fill="white"></rect>
+                    </svg>
+                  </div>
+                </button>
+                <div class="progress-bar">
+                  <svg
+                    width="146"
+                    height="20"
+                    viewBox="0 0 146 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect
+                      y="7"
+                      width="2"
+                      height="13"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="6"
+                      y="6"
+                      width="2"
+                      height="14"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="12"
+                      y="9"
+                      width="2"
+                      height="11"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="18"
+                      y="10"
+                      width="2"
+                      height="10"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="24"
+                      y="3"
+                      width="2"
+                      height="27"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="30"
+                      y="9"
+                      width="2"
+                      height="11"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="36"
+                      y="8"
+                      width="2"
+                      height="12"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="42"
+                      y="7"
+                      width="2"
+                      height="13"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="48"
+                      y="9"
+                      width="2"
+                      height="11"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="54"
+                      width="2"
+                      height="20"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="60"
+                      y="4"
+                      width="2"
+                      height="16"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="66"
+                      y="11"
+                      width="2"
+                      height="9"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="72"
+                      y="9"
+                      width="2"
+                      height="11"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="78"
+                      y="7"
+                      width="2"
+                      height="13"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="84"
+                      y="8"
+                      width="2"
+                      height="12"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="90"
+                      y="9"
+                      width="2"
+                      height="11"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="96"
+                      y="6"
+                      width="2"
+                      height="14"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="102"
+                      y="8"
+                      width="2"
+                      height="12"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="108"
+                      y="10"
+                      width="2"
+                      height="10"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="114"
+                      y="7"
+                      width="2"
+                      height="13"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="120"
+                      y="6"
+                      width="2"
+                      height="14"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="126"
+                      y="6"
+                      width="2"
+                      height="14"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="132"
+                      y="10"
+                      width="2"
+                      height="10"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="138"
+                      y="10"
+                      width="2"
+                      height="10"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="144"
+                      y="14"
+                      width="2"
+                      height="6"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                  </svg>
+                </div>
+                <div class="timeout"><span> </span></div>
+              </div>
+              <p class="emphatically-type-2">
+                <strong>The most liquid objects</strong> are sold when the construction is finished.
+                of construction. With a maximum markup. Our clients, oftentimes,
+                get them much sooner.
+                <svg
+                  width="135"
+                  height="34"
+                  viewBox="0 0 135 34"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2.29356 17.4154C18.4562 17.274 49.14 9.10317 63.0487 5.87391C76.9573 2.64465 85.5258 0.532203 94.2444 1.98223C100.629 3.0441 96.7385 4.8523 93.4933 6.03803C79.4147 11.1819 62.3896 14.712 46.6324 18.6119C36.4042 21.1433 25.2734 23.3873 15.8436 26.5414C11.0984 28.1285 -0.294175 35.7344 36.4144 29.8885C73.1229 24.0427 99.4246 16.4383 132.974 7.84056"
+                    stroke="#00C7D1"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="podcast-box">
+              <div
+                class="player player-skin-2"
+                data-manager-photo-url="img/person.webp">
+                <audio
+                  class="audio-element"
+                  preload="metadata">
+                  <source
+                    src="audio/audio-2.mp3"
+                    type="audio/mpeg" />
+                </audio>
+                <button class="play control" aria-label="play button">
+                  <div class="control-inner">
+                    <svg
+                      class="play-icon"
+                      width="18"
+                      height="19"
+                      viewBox="0 0 18 19"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15.7862 7.2555C17.566 8.25663 17.566 10.8191 15.7862 11.8202L4.05392 18.4196C2.30832 19.4015 0.151443 18.1401 0.151443 16.1373L0.151443 2.93844C0.151443 0.935618 2.30832 -0.32582 4.05393 0.656084L15.7862 7.2555Z"
+                        fill="white"></path>
+                    </svg>
+                  </div>
+                </button>
+                <button class="pause control">
+                  <div class="control-inner">
+                    <svg
+                      class="pause-icon"
+                      width="12"
+                      height="16"
+                      viewBox="0 0 12 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <rect
+                        width="4"
+                        height="16"
+                        rx="2"
+                        fill="white"></rect>
+                      <rect
+                        x="8"
+                        width="4"
+                        height="16"
+                        rx="2"
+                        fill="white"></rect>
+                    </svg>
+                  </div>
+                </button>
+                <div class="progress-bar">
+                  <svg
+                    width="146"
+                    height="20"
+                    viewBox="0 0 146 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect
+                      y="7"
+                      width="2"
+                      height="13"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="6"
+                      y="6"
+                      width="2"
+                      height="14"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="12"
+                      y="9"
+                      width="2"
+                      height="11"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="18"
+                      y="10"
+                      width="2"
+                      height="10"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="24"
+                      y="3"
+                      width="2"
+                      height="27"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="30"
+                      y="9"
+                      width="2"
+                      height="11"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="36"
+                      y="8"
+                      width="2"
+                      height="12"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="42"
+                      y="7"
+                      width="2"
+                      height="13"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="48"
+                      y="9"
+                      width="2"
+                      height="11"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="54"
+                      width="2"
+                      height="20"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="60"
+                      y="4"
+                      width="2"
+                      height="16"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="66"
+                      y="11"
+                      width="2"
+                      height="9"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="72"
+                      y="9"
+                      width="2"
+                      height="11"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="78"
+                      y="7"
+                      width="2"
+                      height="13"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="84"
+                      y="8"
+                      width="2"
+                      height="12"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="90"
+                      y="9"
+                      width="2"
+                      height="11"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="96"
+                      y="6"
+                      width="2"
+                      height="14"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="102"
+                      y="8"
+                      width="2"
+                      height="12"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="108"
+                      y="10"
+                      width="2"
+                      height="10"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="114"
+                      y="7"
+                      width="2"
+                      height="13"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="120"
+                      y="6"
+                      width="2"
+                      height="14"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="126"
+                      y="6"
+                      width="2"
+                      height="14"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="132"
+                      y="10"
+                      width="2"
+                      height="10"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="138"
+                      y="10"
+                      width="2"
+                      height="10"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="144"
+                      y="14"
+                      width="2"
+                      height="6"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                  </svg>
+                </div>
+                <div class="timeout"><span> </span></div>
+              </div>
+              <p class="emphatically-type-2">
+                <strong>Not all developers</strong> hand over keys on time. You can tell
+                This can be understood by the history of transactions, which we have for each of them.
+                <svg
+                  width="130"
+                  height="12"
+                  viewBox="0 0 130 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M0.999922 5.88313C9.23898 9.60406 23.2894 10.4324 37.7754 10.8444C56.1385 11.3667 124.594 -0.702046 128.234 2.55633C130.899 4.94246 119.886 9.07405 117.621 9.27567"
+                    stroke="#991FA9"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="podcast-box">
+              <div
+                class="player player-skin-2"
+                data-manager-photo-url="img/person.webp">
+                <audio
+                  class="audio-element"
+                  preload="metadata">
+                  <source
+                    src="audio/audio-2.mp3"
+                    type="audio/mpeg" />
+                </audio>
+                <button class="play control" aria-label="play button">
+                  <div class="control-inner">
+                    <svg
+                      class="play-icon"
+                      width="18"
+                      height="19"
+                      viewBox="0 0 18 19"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15.7862 7.2555C17.566 8.25663 17.566 10.8191 15.7862 11.8202L4.05392 18.4196C2.30832 19.4015 0.151443 18.1401 0.151443 16.1373L0.151443 2.93844C0.151443 0.935618 2.30832 -0.32582 4.05393 0.656084L15.7862 7.2555Z"
+                        fill="white"></path>
+                    </svg>
+                  </div>
+                </button>
+                <button class="pause control">
+                  <div class="control-inner">
+                    <svg
+                      class="pause-icon"
+                      width="12"
+                      height="16"
+                      viewBox="0 0 12 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <rect
+                        width="4"
+                        height="16"
+                        rx="2"
+                        fill="white"></rect>
+                      <rect
+                        x="8"
+                        width="4"
+                        height="16"
+                        rx="2"
+                        fill="white"></rect>
+                    </svg>
+                  </div>
+                </button>
+                <div class="progress-bar">
+                  <svg
+                    width="146"
+                    height="20"
+                    viewBox="0 0 146 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect
+                      y="7"
+                      width="2"
+                      height="13"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="6"
+                      y="6"
+                      width="2"
+                      height="14"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="12"
+                      y="9"
+                      width="2"
+                      height="11"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="18"
+                      y="10"
+                      width="2"
+                      height="10"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="24"
+                      y="3"
+                      width="2"
+                      height="27"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="30"
+                      y="9"
+                      width="2"
+                      height="11"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="36"
+                      y="8"
+                      width="2"
+                      height="12"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="42"
+                      y="7"
+                      width="2"
+                      height="13"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="48"
+                      y="9"
+                      width="2"
+                      height="11"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="54"
+                      width="2"
+                      height="20"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="60"
+                      y="4"
+                      width="2"
+                      height="16"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="66"
+                      y="11"
+                      width="2"
+                      height="9"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="72"
+                      y="9"
+                      width="2"
+                      height="11"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="78"
+                      y="7"
+                      width="2"
+                      height="13"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="84"
+                      y="8"
+                      width="2"
+                      height="12"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="90"
+                      y="9"
+                      width="2"
+                      height="11"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="96"
+                      y="6"
+                      width="2"
+                      height="14"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="102"
+                      y="8"
+                      width="2"
+                      height="12"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="108"
+                      y="10"
+                      width="2"
+                      height="10"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="114"
+                      y="7"
+                      width="2"
+                      height="13"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="120"
+                      y="6"
+                      width="2"
+                      height="14"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="126"
+                      y="6"
+                      width="2"
+                      height="14"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="132"
+                      y="10"
+                      width="2"
+                      height="10"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="138"
+                      y="10"
+                      width="2"
+                      height="10"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="144"
+                      y="14"
+                      width="2"
+                      height="6"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                  </svg>
+                </div>
+                <div class="timeout"><span> </span></div>
+              </div>
+              <p class="emphatically-type-2">
+                <strong>The best offers don't get published.</strong> They're sold out at the start of the sale. <br />
+                Our <br class="mob" />
+                customers, too.
+                <svg
+                  width="232"
+                  height="17"
+                  viewBox="0 0 232 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M231.779 9.88083C155.094 22.3766 132.833 9.81759 112.541 5.25657C72.8306 -3.66869 38.4354 6.06391 0.874616 14.3693"
+                    stroke="#FFCB05"
+                    stroke-width="3"></path>
+                </svg>
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="podcast-box">
+              <div
+                class="player player-skin-2"
+                data-manager-photo-url="img/person.webp">
+                <audio
+                  class="audio-element"
+                  preload="metadata">
+                  <source
+                    src="audio/audio-2.mp3"
+                    type="audio/mpeg" />
+                </audio>
+                <button class="play control" aria-label="play button">
+                  <div class="control-inner">
+                    <svg
+                      class="play-icon"
+                      width="18"
+                      height="19"
+                      viewBox="0 0 18 19"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15.7862 7.2555C17.566 8.25663 17.566 10.8191 15.7862 11.8202L4.05392 18.4196C2.30832 19.4015 0.151443 18.1401 0.151443 16.1373L0.151443 2.93844C0.151443 0.935618 2.30832 -0.32582 4.05393 0.656084L15.7862 7.2555Z"
+                        fill="white"></path>
+                    </svg>
+                  </div>
+                </button>
+                <button class="pause control">
+                  <div class="control-inner">
+                    <svg
+                      class="pause-icon"
+                      width="12"
+                      height="16"
+                      viewBox="0 0 12 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <rect
+                        width="4"
+                        height="16"
+                        rx="2"
+                        fill="white"></rect>
+                      <rect
+                        x="8"
+                        width="4"
+                        height="16"
+                        rx="2"
+                        fill="white"></rect>
+                    </svg>
+                  </div>
+                </button>
+                <div class="progress-bar">
+                  <svg
+                    width="146"
+                    height="20"
+                    viewBox="0 0 146 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect
+                      y="7"
+                      width="2"
+                      height="13"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="6"
+                      y="6"
+                      width="2"
+                      height="14"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="12"
+                      y="9"
+                      width="2"
+                      height="11"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="18"
+                      y="10"
+                      width="2"
+                      height="10"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="24"
+                      y="3"
+                      width="2"
+                      height="27"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="30"
+                      y="9"
+                      width="2"
+                      height="11"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="36"
+                      y="8"
+                      width="2"
+                      height="12"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="42"
+                      y="7"
+                      width="2"
+                      height="13"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="48"
+                      y="9"
+                      width="2"
+                      height="11"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="54"
+                      width="2"
+                      height="20"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="60"
+                      y="4"
+                      width="2"
+                      height="16"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="66"
+                      y="11"
+                      width="2"
+                      height="9"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="72"
+                      y="9"
+                      width="2"
+                      height="11"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="78"
+                      y="7"
+                      width="2"
+                      height="13"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="84"
+                      y="8"
+                      width="2"
+                      height="12"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="90"
+                      y="9"
+                      width="2"
+                      height="11"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="96"
+                      y="6"
+                      width="2"
+                      height="14"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="102"
+                      y="8"
+                      width="2"
+                      height="12"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="108"
+                      y="10"
+                      width="2"
+                      height="10"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="114"
+                      y="7"
+                      width="2"
+                      height="13"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="120"
+                      y="6"
+                      width="2"
+                      height="14"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="126"
+                      y="6"
+                      width="2"
+                      height="14"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="132"
+                      y="10"
+                      width="2"
+                      height="10"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="138"
+                      y="10"
+                      width="2"
+                      height="10"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                    <rect
+                      x="144"
+                      y="14"
+                      width="2"
+                      height="6"
+                      rx="1"
+                      fill="#FF5E01"></rect>
+                  </svg>
+                </div>
+                <div class="timeout"><span> </span></div>
+              </div>
+              <p class="emphatically-type-2">
+                <strong>Iliquid -</strong> doesn't mean bad. An apartment can be
+                perfectly <br />
+                to meet your requirements.
+                <svg
+                  width="152"
+                  height="64"
+                  viewBox="0 0 152 64"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M150.422 3.56738C150.422 3.56738 67.821 71.7429 17.7394 36.9579"
+                    stroke="#FF5E01"
+                    stroke-width="3"
+                    stroke-linecap="round"></path>
+                  <path
+                    d="M131.453 2C131.453 2 54.2349 51.9848 1.99786 56.0022"
+                    stroke="#FF5E01"
+                    stroke-width="3"
+                    stroke-linecap="round"></path>
+                </svg>
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="listen wrapper">
+        <div class="shape shape-1">
+          <svg
+            width="68"
+            height="65"
+            viewBox="0 0 68 65"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M35.5068 63.0759C32.1826 66.4085 7.6669 64.7423 2.26511 63.0759C-3.13667 61.4096 3.09616 39.7473 1.01855 31.4156C-0.291569 26.1618 20.1325 25.5835 35.5068 29.7494C38.831 30.6501 38.8311 59.7434 35.5068 63.0759Z"
+              fill="#FFCB05"></path>
+            <path
+              d="M49.3122 1.01266C51.0618 -0.741309 63.9648 0.135656 66.8078 1.01266C69.6509 1.88967 66.3704 13.2909 67.4639 17.676C68.1535 20.4412 57.4039 20.7455 49.3122 18.5529C47.5626 18.0789 47.5626 2.76664 49.3122 1.01266Z"
+              fill="#77328B"></path>
+          </svg>
+        </div>
+        <div
+          class="player player-skin-3"
+          data-manager-photo-url="img/person.webp">
+          <audio
+            class="audio-element"
+            preload="metadata">
+            <source
+              src="audio/audio-3.mp3"
+              type="audio/mpeg" />
+          </audio>
+          <button class="play control" aria-label="play button">
+            <div class="control-inner">
+              <svg
+                class="play-icon"
+                width="18"
+                height="19"
+                viewBox="0 0 18 19"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M15.7862 7.2555C17.566 8.25663 17.566 10.8191 15.7862 11.8202L4.05392 18.4196C2.30832 19.4015 0.151443 18.1401 0.151443 16.1373L0.151443 2.93844C0.151443 0.935618 2.30832 -0.32582 4.05393 0.656084L15.7862 7.2555Z"
+                  fill="white"></path>
+              </svg>
+            </div>
+          </button>
+          <button class="pause control">
+            <div class="control-inner">
+              <svg
+                class="pause-icon"
+                width="12"
+                height="16"
+                viewBox="0 0 12 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect
+                  width="4"
+                  height="16"
+                  rx="2"
+                  fill="white"></rect>
+                <rect
+                  x="8"
+                  width="4"
+                  height="16"
+                  rx="2"
+                  fill="white"></rect>
+              </svg>
+            </div>
+          </button>
+          <div class="progress-bar">
+            <svg
+              width="68"
+              height="24"
+              viewBox="0 0 68 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect
+                y="11"
+                width="2"
+                height="7"
+                rx="1"
+                fill="#00C7D1"></rect>
+              <rect
+                x="6"
+                y="7"
+                width="2"
+                height="11"
+                rx="1"
+                fill="#00C7D1"></rect>
+              <rect
+                x="12"
+                y="5"
+                width="2"
+                height="13"
+                rx="1"
+                fill="#00C7D1"></rect>
+              <rect
+                x="18"
+                y="8"
+                width="2"
+                height="10"
+                rx="1"
+                fill="#00C7D1"></rect>
+              <rect
+                x="24"
+                y="10"
+                width="2"
+                height="8"
+                rx="1"
+                fill="#00C7D1"></rect>
+              <rect
+                x="30"
+                y="10"
+                width="2"
+                height="8"
+                rx="1"
+                fill="#00C7D1"></rect>
+              <rect
+                x="36"
+                y="5"
+                width="2"
+                height="13"
+                rx="1"
+                fill="#00C7D1"></rect>
+              <rect
+                x="42"
+                y="10"
+                width="2"
+                height="8"
+                rx="1"
+                fill="#00C7D1"></rect>
+              <rect
+                x="48"
+                y="7"
+                width="2"
+                height="11"
+                rx="1"
+                fill="#00C7D1"></rect>
+              <rect
+                x="54"
+                y="5"
+                width="2"
+                height="13"
+                rx="1"
+                fill="#00C7D1"></rect>
+              <rect
+                x="60"
+                y="5"
+                width="2"
+                height="13"
+                rx="1"
+                fill="#00C7D1"></rect>
+              <rect
+                x="66"
+                y="14"
+                width="2"
+                height="4"
+                rx="1"
+                fill="#00C7D1"></rect>
+            </svg>
+          </div>
+          <div class="timeout"><span> </span></div>
+        </div>
+        <div class="section-title">
+          <h2>
+            <strong class="accent-text--color-blue">We hear you. <br /></strong>
+            We don't change your mind
+          </h2>
+          <p class="emphatically-type-2">
+            Our goal is to properly <br class="ksd" />
+            to understand you, break down stereotypes, and work <br class="ksd" />
+            with your request.
+            <svg
+              width="216"
+              height="17"
+              viewBox="0 0 216 17"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M3 3.08726C38.5396 0.312161 117.848 3.81236 129 3.08727C181.302 -0.31342 182.491 6.31221 213 3.08727"
+                stroke="#00C7D1"
+                stroke-width="3"
+                stroke-linecap="round"></path>
+              <path
+                d="M213 15C129.005 10.5001 4 15 4 15"
+                stroke="#00C7D1"
+                stroke-width="3"
+                stroke-linecap="round"></path>
+            </svg>
+          </p>
+        </div>
+        <ul class="facts-list">
+          <li>
+            <div class="fact">
+              <div class="fact-image">
+                <svg
+                  class="left-corner"
+                  width="23"
+                  height="23"
+                  viewBox="0 0 23 23"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M21.491 21.8354C19.4789 23.8525 4.64049 22.844 1.37099 21.8354C-1.89851 20.8269 1.87399 7.71546 0.616493 2.67263C-0.176477 -0.507343 12.1855 -0.857337 21.491 1.66411C23.503 2.20929 23.503 19.8184 21.491 21.8354Z"
+                    fill="#FFCB05"></path></svg
+                ><img
+                  src="img/fact2.webp"
+                  width="569"
+                  height="569"
+                  alt="#" />
+              </div>
+              <div class="fact-text">
+                <p>
+                  <strong>Iliquid -</strong> doesn't mean bad. An apartment
+                  can be a perfect fit for <br class="mob" />
+                  your requirements.
+                </p>
+                <svg
+                  width="115"
+                  height="84"
+                  viewBox="0 0 115 84"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M99.9396 1.86478C102.405 22.3742 97.9291 31.7227 77.5854 36.6683C48.773 43.6721 33.2452 54.2236 16.513 79.3353"
+                    stroke="#FFCB05"
+                    stroke-width="3"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                  <path
+                    d="M14.2303 66.061C16.4341 71.3156 13.8958 76.3217 14.9775 81.6631C18.3561 79.2361 25.4253 74.6237 29.7992 74.4666"
+                    stroke="#FFCB05"
+                    stroke-width="3"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="fact">
+              <div class="fact-image">
+                <svg
+                  class="right-corner"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 28 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M26.1629 26.5823C23.7135 29.0378 5.64929 27.8101 1.66903 26.5823C-2.31123 25.3545 2.28138 9.39273 0.750513 3.25363C-0.214841 -0.617636 14.8345 -1.04372 26.1629 2.02587C28.6123 2.68957 28.6124 24.1267 26.1629 26.5823Z"
+                    fill="#FF5E01"></path></svg
+                ><img
+                  src="img/fact1.webp"
+                  width="550"
+                  height="550"
+                  alt="#" />
+              </div>
+              <div class="fact-text">
+                <p>
+                  <strong>Even 28 m²</strong> can be comfortable if there are no 
+                  <br />
+                  blind spots.
+                </p>
+                <svg
+                  width="124"
+                  height="108"
+                  viewBox="0 0 124 108"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M119.744 95.3443C57.9067 102.831 -5.01157 65.5011 2.48884 1.50245M108.269 105.78C111.547 100.425 117.648 99.4188 121.722 94.9954C117.388 93.5871 108.731 90.3325 105.783 86.5673"
+                    stroke="#F37021"
+                    stroke-width="3"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="fact">
+              <div class="fact-image">
+                <svg
+                  class="right-corner"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2.0995 1.62026C4.89886 -1.18609 25.5437 0.217054 30.0925 1.62027C34.6414 3.02348 29.3927 21.2655 31.1423 28.2816C32.2455 32.7059 15.0463 33.1928 2.0995 29.6847C-0.699822 28.9262 -0.699853 4.42662 2.0995 1.62026Z"
+                    fill="#00AAAD"></path></svg
+                ><img
+                  src="img/fact3.webp"
+                  width="549"
+                  height="549"
+                  alt="#" />
+              </div>
+              <div class="fact-text">
+                <p>
+                  <strong>Another insight about the apartments.</strong> <br />
+                  Information on it will be <br />
+                  a little later.
+                </p>
+                <svg
+                  width="136"
+                  height="109"
+                  viewBox="0 0 136 109"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M22.8718 101.212C33.9641 98.431 59.1117 90.1538 76.5019 74.4997C99.932 53.4087 76.5013 2.49928 113.003 2.49972"
+                    stroke="#00C7D1"
+                    stroke-width="3"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                  <path
+                    d="M31.7466 104.56C29.6244 102.946 23.3093 103.168 20.8181 102.068C23.0653 100.76 27.8794 94.9805 29.2229 92.9526"
+                    stroke="#00C7D1"
+                    stroke-width="3"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="watchword">
+          <span
+            >And hundreds more insights <br />
+            from our realtors</span
+          >
+        </div>
+      </section>
+      <section class="separate-section">
+        <div class="shape shape-1">
+          <img
+            src="img/shapes/ms6.svg"
+            alt="#" />
+        </div>
+        <div class="shape shape-mob shape-2">
+          <img
+            src="img/shapes/ms15.svg"
+            alt="#" />
+        </div>
+        <div class="wrapper">
+          <div
+            class="player player-skin-3"
+            data-manager-photo-url="img/person.webp">
+            <audio
+              class="audio-element"
+              preload="metadata">
+              <source
+                src="audio/audio-3.mp3"
+                type="audio/mpeg" />
+            </audio>
+            <button class="play control" aria-label="play button">
+              <div class="control-inner">
+                <svg
+                  class="play-icon"
+                  width="18"
+                  height="19"
+                  viewBox="0 0 18 19"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M15.7862 7.2555C17.566 8.25663 17.566 10.8191 15.7862 11.8202L4.05392 18.4196C2.30832 19.4015 0.151443 18.1401 0.151443 16.1373L0.151443 2.93844C0.151443 0.935618 2.30832 -0.32582 4.05393 0.656084L15.7862 7.2555Z"
+                    fill="white"></path>
+                </svg>
+              </div>
+            </button>
+            <button class="pause control">
+              <div class="control-inner">
+                <svg
+                  class="pause-icon"
+                  width="12"
+                  height="16"
+                  viewBox="0 0 12 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <rect
+                    width="4"
+                    height="16"
+                    rx="2"
+                    fill="white"></rect>
+                  <rect
+                    x="8"
+                    width="4"
+                    height="16"
+                    rx="2"
+                    fill="white"></rect>
+                </svg>
+              </div>
+            </button>
+            <div class="progress-bar">
+              <svg
+                width="68"
+                height="24"
+                viewBox="0 0 68 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect
+                  y="11"
+                  width="2"
+                  height="7"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="6"
+                  y="7"
+                  width="2"
+                  height="11"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="12"
+                  y="5"
+                  width="2"
+                  height="13"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="18"
+                  y="8"
+                  width="2"
+                  height="10"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="24"
+                  y="10"
+                  width="2"
+                  height="8"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="30"
+                  y="10"
+                  width="2"
+                  height="8"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="36"
+                  y="5"
+                  width="2"
+                  height="13"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="42"
+                  y="10"
+                  width="2"
+                  height="8"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="48"
+                  y="7"
+                  width="2"
+                  height="11"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="54"
+                  y="5"
+                  width="2"
+                  height="13"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="60"
+                  y="5"
+                  width="2"
+                  height="13"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="66"
+                  y="14"
+                  width="2"
+                  height="4"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+              </svg>
+            </div>
+            <div class="timeout"><span> </span></div>
+          </div>
+          <h2>
+            <strong class="accent-text--color-blue"
+              >Picking up.<br class="mob" />
+              We're not selling <br
+            /></strong>
+            We want to help, <br class="mob" />
+            not sell a particular housing unit. We work
+            <span class="emphatically-type-3"
+              >with all
+              <svg
+                width="244"
+                height="73"
+                viewBox="0 0 244 73"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M110.426 13.3677C60.7501 2.34717 18.7164 6.75535 7.25253 23.6535C-4.21135 40.5517 4.31429 59.6626 21.009 64.4489C42.4081 70.5839 84.8889 69.3688 125.712 70.5839C149.155 71.2816 166.217 71.4093 188.38 68.4705C210.543 65.5317 224.3 58.1847 224.3 58.1847C224.3 58.1847 243.712 49.7165 241.878 30.2659C240.631 17.0412 231.942 8.82944 217.397 4.26844C202.853 -0.292565 177.325 3.26739 151.683 4.26842C127.963 5.19441 79.261 9.99985 53.8719 13.3677"
+                  stroke="#00C7D1"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path></svg></span
+            >real estate developers.
+          </h2>
+        </div>
+      </section>
+      <section class="stories">
+        <div class="wrapper">
+          <div class="shape shape-1">
+            <img
+              src="img/shapes/ms9.svg"
+              alt="#" />
+          </div>
+          <div class="shape shape-2">
+            <img
+              src="img/shapes/ms10.svg"
+              alt="#" />
+          </div>
+          <div
+            class="player player-skin-3"
+            data-manager-photo-url="img/person.webp">
+            <audio
+              class="audio-element"
+              preload="metadata">
+              <source
+                src="audio/audio-3.mp3"
+                type="audio/mpeg" />
+            </audio>
+            <button class="play control" aria-label="play button">
+              <div class="control-inner">
+                <svg
+                  class="play-icon"
+                  width="18"
+                  height="19"
+                  viewBox="0 0 18 19"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M15.7862 7.2555C17.566 8.25663 17.566 10.8191 15.7862 11.8202L4.05392 18.4196C2.30832 19.4015 0.151443 18.1401 0.151443 16.1373L0.151443 2.93844C0.151443 0.935618 2.30832 -0.32582 4.05393 0.656084L15.7862 7.2555Z"
+                    fill="white"></path>
+                </svg>
+              </div>
+            </button>
+            <button class="pause control">
+              <div class="control-inner">
+                <svg
+                  class="pause-icon"
+                  width="12"
+                  height="16"
+                  viewBox="0 0 12 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <rect
+                    width="4"
+                    height="16"
+                    rx="2"
+                    fill="white"></rect>
+                  <rect
+                    x="8"
+                    width="4"
+                    height="16"
+                    rx="2"
+                    fill="white"></rect>
+                </svg>
+              </div>
+            </button>
+            <div class="progress-bar">
+              <svg
+                width="103"
+                height="14"
+                viewBox="0 0 103 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect
+                  y="2"
+                  width="2"
+                  height="11"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="6"
+                  width="2"
+                  height="13"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="12"
+                  y="3"
+                  width="2"
+                  height="10"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="18"
+                  y="5"
+                  width="2"
+                  height="8"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="24"
+                  y="5"
+                  width="2"
+                  height="8"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="30"
+                  width="2"
+                  height="13"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="36"
+                  y="5"
+                  width="2"
+                  height="8"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="42"
+                  y="2"
+                  width="2"
+                  height="11"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="48"
+                  width="2"
+                  height="13"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="54"
+                  width="2"
+                  height="13"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="60"
+                  y="5"
+                  width="2"
+                  height="8"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="66"
+                  width="2"
+                  height="13"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="72"
+                  y="5"
+                  width="2"
+                  height="8"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="78"
+                  y="3"
+                  width="2"
+                  height="10"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="84"
+                  y="2"
+                  width="2"
+                  height="11"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="90"
+                  width="2"
+                  height="13"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="96"
+                  y="6"
+                  width="2"
+                  height="7"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="101"
+                  y="9"
+                  width="2"
+                  height="4"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+              </svg>
+            </div>
+            <div class="timeout"><span> </span></div>
+          </div>
+          <h2>
+            <strong class="accent-text--color-blue">Real-life stories.</strong
+            ><br />
+            Thanks to realtors
+            <svg
+              width="314"
+              height="194"
+              viewBox="0 0 314 194"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M1.99946 27C1.99946 27 283.56 -35.346 287.999 80.9988C290.346 142.519 225.499 155.501 168.5 164.5"
+                stroke="#00C7D1"
+                stroke-width="3"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path
+                d="M175.325 147.541C174.23 156.076 168 159.401 165.59 166.878C171.01 167.492 182.039 169.337 187.039 173.688"
+                stroke="#00C7D1"
+                stroke-width="3"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+          </h2>
+          <script src="https://storifyme.com/widgets/widget/5960"></script>
+        </div>
+      </section>
+      <section class="time">
+        <div class="wrapper">
+          <div class="shape shape-1">
+            <img
+              src="img/drawings/curve.svg"
+              alt="#" />
+          </div>
+          <h2>
+            The whole process will take a month. <br />
+            <strong class="accent-text--color-blue">If necessary, a day </strong>
+          </h2>
+          <div
+            class="player player-skin-3"
+            data-manager-photo-url="img/person.webp">
+            <audio
+              class="audio-element"
+              preload="metadata">
+              <source
+                src="audio/audio-3.mp3"
+                type="audio/mpeg" />
+            </audio>
+            <button class="play control" aria-label="play button">
+              <div class="control-inner">
+                <svg
+                  class="play-icon"
+                  width="18"
+                  height="19"
+                  viewBox="0 0 18 19"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M15.7862 7.2555C17.566 8.25663 17.566 10.8191 15.7862 11.8202L4.05392 18.4196C2.30832 19.4015 0.151443 18.1401 0.151443 16.1373L0.151443 2.93844C0.151443 0.935618 2.30832 -0.32582 4.05393 0.656084L15.7862 7.2555Z"
+                    fill="white"></path>
+                </svg>
+              </div>
+            </button>
+            <button class="pause control">
+              <div class="control-inner">
+                <svg
+                  class="pause-icon"
+                  width="12"
+                  height="16"
+                  viewBox="0 0 12 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <rect
+                    width="4"
+                    height="16"
+                    rx="2"
+                    fill="white"></rect>
+                  <rect
+                    x="8"
+                    width="4"
+                    height="16"
+                    rx="2"
+                    fill="white"></rect>
+                </svg>
+              </div>
+            </button>
+            <div class="progress-bar">
+              <svg
+                width="103"
+                height="14"
+                viewBox="0 0 103 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect
+                  y="2"
+                  width="2"
+                  height="11"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="6"
+                  width="2"
+                  height="13"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="12"
+                  y="3"
+                  width="2"
+                  height="10"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="18"
+                  y="5"
+                  width="2"
+                  height="8"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="24"
+                  y="5"
+                  width="2"
+                  height="8"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="30"
+                  width="2"
+                  height="13"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="36"
+                  y="5"
+                  width="2"
+                  height="8"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="42"
+                  y="2"
+                  width="2"
+                  height="11"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="48"
+                  width="2"
+                  height="13"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="54"
+                  width="2"
+                  height="13"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="60"
+                  y="5"
+                  width="2"
+                  height="8"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="66"
+                  width="2"
+                  height="13"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="72"
+                  y="5"
+                  width="2"
+                  height="8"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="78"
+                  y="3"
+                  width="2"
+                  height="10"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="84"
+                  y="2"
+                  width="2"
+                  height="11"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="90"
+                  width="2"
+                  height="13"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="96"
+                  y="6"
+                  width="2"
+                  height="7"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+                <rect
+                  x="101"
+                  y="9"
+                  width="2"
+                  height="4"
+                  rx="1"
+                  fill="#00C7D1"></rect>
+              </svg>
+            </div>
+            <div class="timeout"><span> </span></div>
+          </div>
+          <div class="columns-wrap">
+            <ul class="points-list">
+              <li>
+                <div class="point">
+                  <div class="num"><span>1</span></div>
+                  <div class="text">
+                    <strong class="emphatically-type-3"
+                      >Call us
+                      <svg
+                        width="186"
+                        height="42"
+                        viewBox="0 0 186 42"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M56.4853 1.37039C-9.18758 -3.19736 -5.22765 35.9284 15.3603 39.2217C34.3935 42.2664 67.2776 40.4188 100.461 40.685C117.888 40.8247 135.926 40.862 144.897 40.7735C153.869 40.685 161.135 41.5714 169.715 38.734C178.255 35.91 185.484 31.8666 184.975 23.126C184.449 14.1064 177.541 9.70859 168.595 7.15805C152.582 2.59221 137.636 1.77118 120.841 1.37039C102.657 0.936485 90.9178 2.26168 70.529 3.1284C51.8624 3.9219 37.268 2.23852 21.0007 6.00726"
+                          stroke="#00C7D1"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path></svg
+                    ></strong>
+                    <p>
+                      Or come in for a consultation <br class="mob" />
+                      at the office. We can answer many questions in an hour.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="point">
+                  <div class="num"><span>2</span></div>
+                  <div class="text">
+                    <strong>Next, we'll make a contract</strong>
+                    <p>
+                      We will explain in detail all the conditions, fix the full
+                      cost, negotiate all the details.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="point">
+                  <div class="num"><span>3</span></div>
+                  <div class="text">
+                    <strong>Let's choose an apartment</strong>
+                    <p>
+                      One more step, the information <br />
+                      for which will come later.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="point">
+                  <div class="num"><span>4</span></div>
+                  <div class="text">
+                    <strong>The apartment is yours</strong>
+                    <p>
+                      You have all the paperwork for your new apartment in hand. Don't
+                      don't forget to use your <br class="mob" /> bonuses
+                      on the purchase of furniture.
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="photos">
+              <div class="photo-card">
+                <div class="photo-img">
+                  <img
+                    src="img/p2.webp"
+                    width="413"
+                    height="413"
+                    alt="#" />
+                </div>
+                <p class="photo-descr">
+                  Andrew Holagan <br class="mob" />
+                  — <br />
+                  leading office expert
+                </p>
+              </div>
+              <div class="photo-card">
+                <div class="photo-img">
+                  <img
+                    src="img/p2.webp"
+                    width="413"
+                    height="413"
+                    alt="#" />
+                </div>
+                <p class="photo-descr">
+                  Andrew Holagan — <br />
+                  office agent
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="btm-title">
+            <div class="shape shape-1">
+              <img
+                src="img/shapes/ms4.svg"
+                alt="#" />
+            </div>
+            <div class="shape shape-2">
+              <img
+                src="img/shapes/ms8.svg"
+                alt="#" />
+            </div>
+            <h2>
+              We help you make choices, <br class="mob" />
+              avoid mistakes,  <br />
+              <strong class="accent-text--color-blue"
+                >buy <br class="mob" />
+                right.
+              </strong>
+            </h2>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="main-footer">
+      <div class="wrapper">
+        <div class="contacts">
+          <div class="left-side">
+            <div class="logo">
+           
+            </div>
+            <h3>
+              Start with counseling. Free. <br />
+              In the office, <br class="mob" />
+              on the phone
+              <a
+                href="tel: +1 (212) 555-6789"
+                class="accent-text--color-blue"
+                >+1 (212) 555-6789</a
+              >
+              or any other convenient way
+            </h3>
+            <a
+              class="callback-btn r-btn underlined-btn"
+              href="#"
+              >Call me back
+            </a>
+            <ul class="socials-list">
+
+              <li>
+                <a
+                  class="r-btn arrow-btn"
+                  href="#"
+                  >WhatsApp</a
+                >
+              </li>
+
+            </ul>
+          </div>
+          <div class="right-side">
+            <div class="messages-slider-box">
+              <div class="messages-slider swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="message-box">
+                      <div class="emodzi">
+                        <img
+                          src="img/emodzi/1.svg"
+                          width="24.81"
+                          height="25.77"
+                          alt="#" />
+                      </div>
+                      <div class="message-text">
+                        Are safe neighborhoods a fantasy?
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="message-box">
+                      <div class="emodzi">
+                        <img
+                          src="img/emodzi/2.svg"
+                          width="24.81"
+                          height="25.77"
+                          alt="#" />
+                      </div>
+                      <div class="message-text">
+                        How to understand whether an apartment is liquid or no
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="message-box">
+                      <div class="emodzi">
+                        <img
+                          src="img/emodzi/3.svg"
+                          width="24.81"
+                          height="25.77"
+                          alt="#" />
+                      </div>
+                      <div class="message-text">
+                        Can the overpayment on a loan be lowered?
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="message-box">
+                      <div class="emodzi">
+                        <img
+                          src="img/emodzi/4.svg"
+                          width="24.81"
+                          height="25.77"
+                          alt="#" />
+                      </div>
+                      <div class="message-text">
+                        What guarantee is there that it will be completed?
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="message-box">
+                      <div class="emodzi">
+                        <img
+                          src="img/emodzi/1.svg"
+                          width="24.81"
+                          height="25.77"
+                          alt="#" />
+                      </div>
+                      <div class="message-text">
+                        I want to buy to rent out - what do you recommend?
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="message-box">
+                      <div class="emodzi">
+                        <img
+                          src="img/emodzi/5.svg"
+                          width="24.81"
+                          height="25.77"
+                          alt="#" />
+                      </div>
+                      <div class="message-text">
+                        We want to stay in our neighborhood. What are our options?
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-line">
+          <a
+            class="copy"
+            href="https://miel.ru/"
+            >© 1980-2023 Real Estate</a
+          ><a
+            class="rose-btn rose-btn--type-3 to-top"
+            href="#">
+            upstairs
+            <svg
+              width="30"
+              height="23"
+              viewBox="0 0 30 23"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M0.999944 21.9638C25.4998 22.9862 23.9997 2.02214 23.9997 2.02214"
+                stroke="#C3146F"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"></path>
+              <path
+                d="M19.0001 8.49718C21.6406 6.58089 21.9318 3.30907 24.0604 0.999942C24.9488 3.25436 26.9494 7.74039 29 9.18103"
+                stroke="#C3146F"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path></svg
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <script src="libs/jquery.min.js"></script>
+    <script src="libs/lazy-line-painter-1.9.6.min.js"></script>
+    <script src="libs/jquery.nice-select.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="libs/jquery.inputmask.min.js"></script>
+    <script src="js/main.js?v=25"></script>
+    <script src="js/player.js"></script>
+  </body>
+</html>
